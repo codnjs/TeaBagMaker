@@ -36,7 +36,7 @@ namespace TeaBagMaker
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(this.cbList.SelectedIndex == 0) // 홍차 ,, 이미 0이 선택되어있음 ㅠ
+            if(this.cbList.SelectedIndex == 0) // 홍차
             {
                 
             }
