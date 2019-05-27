@@ -54,7 +54,7 @@ namespace TeaBagMaker
             }
         }
 
-        private bool Timer_Tick()
+        private void Timer_Tick(object sender, EventArgs e)
         {
             if (this.cbList.SelectedIndex == 0) // 홍차 ,, 이미 0이 선택되어있음 ㅠ
             {
@@ -62,7 +62,7 @@ namespace TeaBagMaker
                 this.Timer.Enabled = false;
                 MessageBox.Show("티백을 건지세요!", "티백이 모두 우려졌습니다",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
+                this.lbresult.Text = this.OrgStr + "2분" ;
             }
             else if (this.cbList.SelectedIndex == 1) // 녹차
             {
@@ -70,7 +70,7 @@ namespace TeaBagMaker
                 this.Timer.Enabled = false;
                 MessageBox.Show("티백을 건지세요!", "티백이 모두 우려졌습니다",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
+                this.lbresult.Text = this.OrgStr + "3분";
             }
             else if (this.cbList.SelectedIndex == 2) // 루이보스차
             {
@@ -78,7 +78,7 @@ namespace TeaBagMaker
                 this.Timer.Enabled = false;
                 MessageBox.Show("티백을 건지세요!", "티백이 모두 우려졌습니다",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
+                this.lbresult.Text = this.OrgStr + "5분";
             }
             else if (this.cbList.SelectedIndex == 3) // 국화차
             {
@@ -86,13 +86,12 @@ namespace TeaBagMaker
                 this.Timer.Enabled = false;
                 MessageBox.Show("티백을 건지세요!", "티백이 모두 우려졌습니다",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
+                this.lbresult.Text = this.OrgStr + "2분";
             }
             else
             {
                 MessageBox.Show("어딘가 잘못되었습니다", "경고",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
             }
         }
 
@@ -103,10 +102,9 @@ namespace TeaBagMaker
 
         private void CountBtn_Click(object sender, EventArgs e)
         {
-            if(Timer_Tick())
-            {
-
-            }
+            
         }
     }
+
+    // 죄송합니다 선생님... 다 못했지만 제출은 할게욥.. 저 혼자서 더 해보겠습니다ㅠㅠ
 }
